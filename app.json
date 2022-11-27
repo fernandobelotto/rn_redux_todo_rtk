@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "rn_template",
-    "slug": "rn_template",
+    "name": "rtk_todo",
+    "slug": "rtk_todo",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",

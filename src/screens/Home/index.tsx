@@ -13,12 +13,14 @@ import {
   useColorMode,
   useColorModeValue
 } from "native-base";
+
 import { useState } from "react";
 import { Platform } from "react-native";
 import TodoList from "../../components/TodoList";
 import VisibilitySelector from "../../components/VisibilitySelector";
 import { useAddTodoMutation } from "../../store/api";
-import { ActivityIndicator } from "react-native";
+
+import * as Haptics from 'expo-haptics';
 
 const AppHomeScreen = () => {
 
@@ -28,7 +30,10 @@ const AppHomeScreen = () => {
   const handleAddTodo = async () => {
     addTodo(text).unwrap()
     .catch((err) => console.log(err))
-    .then(() => setText(""))
+    .then(() => {
+      setText("")
+      Haptics.selectionAsync()
+    })
   };
 
   const { toggleColorMode, colorMode } = useColorMode();
