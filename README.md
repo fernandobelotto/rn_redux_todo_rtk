@@ -1,5 +1,5 @@
-# rn_redux_todo
-react native app with redux toolkit and native base
+# rn_redux_todo_rtk
+react native app with rtk query and native base
 
 # Prints
 | Preview Android   |   Preview iOS   |
